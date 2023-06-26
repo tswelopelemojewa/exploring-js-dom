@@ -53,30 +53,37 @@ const fruits = ['Apples', 'Pears', 'Oranges', 'Grapes', 'Bananas'];
 
 console.log(fruits);
 
+
+
+
 const fruitButton = document.querySelector(".fruitButton");
 const fruitBox = document.querySelector('.fruitBox');
 
 const fruitList = document.querySelector(".fruits");
-
-fruitButton.addEventListener('click', function(){
-    if(fruitBox.value.trim().length > 0){
-        const li = document.createElement('li');
-        li.innerText = fruits.push(fruitBox.value)
-        console.log("added")
-        console.log(fruits)
-        fruitList.appendChild(li);
-    }
-});
-
-console.log(fruitList)
 
 for (let i=0; i<fruits.length; i++){
     // get fruits from the list
     const fruit = fruits[i];
 
     //create a new li element
-    const li = document.createElement('li');
-    li.innerText = fruit;
-    fruitList.appendChild(li);
+    const span = document.createElement('span');
+    span.innerText = fruit;
+    fruitList.appendChild(span);
 }
+
+
+fruitButton.addEventListener('click', function(){
+    if(fruitBox.value.trim().length > 0){
+        fruits.push(fruitBox.value)
+        const span = document.createElement('span');
+        span.innerText = fruitBox.value;
+        console.log("added")
+        console.log(fruits)
+        fruitList.appendChild(span);
+    }
+});
+
+console.log(fruitList)
+
+
 

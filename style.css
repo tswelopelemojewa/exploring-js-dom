@@ -1,0 +1,14 @@
+
+body{
+    background-image: url("images/js.png");
+    height: 100%;
+    color: white;
+}
+
+main{
+    background-color: rgba(0, 0,0, 0.9);
+}
+
+h2, h4, p, span{
+    color: white;
+}
